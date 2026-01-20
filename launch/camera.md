@@ -1,7 +1,6 @@
 package to have 
 
-sudo apt install libraspberrypi-bin v4l-utils ros-humble-v4l2-camera
-sudo apt install ros-humble-image-transport-plugins ros-humble-rqt-image-view
+sudo apt install libraspberrypi-bin v4l-utils ros-humble-v4l2-camera ros-humble-image-transport-plugins ros-humble-rqt-image-view
 
 checks
 
@@ -37,9 +36,4 @@ ls -l /dev/serial/by-id/
 
 this will list the peripherals connected to pi 
 
-how to start and stop lidar motor
 
-check for ros2 service call
-
-ros2 service call /stop_motor std_srvs/srv/Empty
-ros2 service call /start_motor std_srvs/srv/Empty

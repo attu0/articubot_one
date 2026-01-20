@@ -95,3 +95,9 @@ ros2 run demo_nodes_py listener
 ```
 
 If both nodes communicate successfully, your ROS 2 installation is complete!
+
+## Colcon Build
+
+```bash 
+sudo apt install python3-colcon-common-extensions
+```
