@@ -101,3 +101,42 @@ If both nodes communicate successfully, your ROS 2 installation is complete!
 ```bash 
 sudo apt install python3-colcon-common-extensions
 ```
+
+## Build your Workspace
+
+Creating the directory
+```bash
+mkdir -p dev_ws/src
+```
+
+Cloning the project
+```bash
+cd ~/dev_ws/src
+git clone https://github.com/attu0/articubot_one.git
+
+```
+
+Colcon build
+```bash
+cd ~/dev_ws
+colcon build --symlink-install
+
+```
+
+## Run the project
+
+Source it
+```bash
+cd ~/dev_ws
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+```
+
+ROS Run with empty world
+```bash
+ros2 launch articubot_one launch_sim.launch.py 
+```
+ROS run with My World
+```bash
+ros2 launch articubot_one launch_sim.launch.py world:=src/articubot_one/worlds/world.world 
+```
