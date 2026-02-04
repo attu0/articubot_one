@@ -136,6 +136,7 @@ ROS Run with empty world
 ```bash
 ros2 launch articubot_one launch_sim.launch.py 
 ```
+
 ROS run with My World
 ```bash
 ros2 launch articubot_one launch_sim.launch.py world:=src/articubot_one/worlds/world.world 
