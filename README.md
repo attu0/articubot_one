@@ -5,7 +5,7 @@
 
 ## Initial Setup
 
-Update your system:
+##### Update your system:
 ```bash
 sudo apt update
 sudo apt upgrade
@@ -13,29 +13,29 @@ sudo apt upgrade
 
 ## Configure Raspberry Pi Interfaces
 
-Install and run raspi-config:
+##### Install and run raspi-config:
 ```bash
 sudo apt install raspi-config
 ```
 
-Navigate to **Interface Options** and enable:
+##### Navigate to **Interface Options** and enable:
 - Legacy Camera
 - SPI
 - I2C
 
-Reboot the system:
+##### Reboot the system:
 ```bash
 sudo reboot
 ```
 
 ## Configure Locale Settings
 
-Check current locale:
+##### Check current locale:
 ```bash
 locale  # check for UTF-8
 ```
 
-Install and configure locales:
+##### Install and configure locales:
 ```bash
 sudo apt update && sudo apt install locales
 sudo locale-gen en_US en_US.UTF-8
@@ -43,14 +43,14 @@ sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
 ```
 
-Verify locale settings:
+##### Verify locale settings:
 ```bash
 locale  # verify settings
 ```
 
 ## Install ROS 2 Humble
 
-Add universe repository:
+##### Add universe repository:
 ```bash
 sudo apt install software-properties-common
 sudo add-apt-repository universe
@@ -75,20 +75,20 @@ Install ROS 2 Humble Desktop:
 sudo apt install ros-humble-desktop
 ```
 
-Source ROS 2 environment:
+### Source ROS 2 environment:
 ```bash
 source /opt/ros/humble/setup.bash
 ```
 
 ## Test ROS 2 Installation
 
-Run the talker example in one terminal:
+##### Run the talker example in one terminal:
 ```bash
 source /opt/ros/humble/setup.bash
 ros2 run demo_nodes_cpp talker
 ```
 
-Run the listener example in another terminal:
+##### Run the listener example in another terminal:
 ```bash
 source /opt/ros/humble/setup.bash
 ros2 run demo_nodes_py listener
@@ -116,28 +116,42 @@ git clone https://github.com/attu0/articubot_one.git
 
 ```
 
-Colcon build
+##### Colcon build
 ```bash
 cd ~/dev_ws
 colcon build --symlink-install
 
 ```
 
-## Run the project
+## Run the project Simulation
 
-Source it
+##### Source it
 ```bash
 cd ~/dev_ws
 source /opt/ros/humble/setup.bash
 source install/setup.bash
 ```
 
-ROS Run with empty world
+##### ROS Gazebo run with empty world
 ```bash
 ros2 launch articubot_one launch_sim.launch.py 
 ```
 
-ROS run with My World
+##### ROS Gazebo run with My World
 ```bash
 ros2 launch articubot_one launch_sim.launch.py world:=src/articubot_one/worlds/world.world 
 ```
+
+##### Launch rviz
+```bash
+rviz2 -d src/articubot_one/config/main.rviz
+```
+
+##### Control the Robot
+```bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=/diff_cont/cmd_vel_unstamped
+```
+
+##### Get Image feed
+```bash
+ros2 run rqt_image_view rqt_image_view
