@@ -1,9 +1,12 @@
-package to have 
+# package to have 
 
+```bash
 sudo apt install ros-humble-rplidar-ros
+```
 
-to simply test if you are getting lidar scan then run the following command
+## to simply test if you are getting lidar scan then run the following command
 
+```bash
 ros2 run rplidar_ros rplidar_node \
   --ros-args \
   -p serial_port:=/dev/ttyUSB0 \ 
@@ -11,16 +14,22 @@ ros2 run rplidar_ros rplidar_node \
   -p frame_id:=laser \
   -p angle_compensate:=false \
   -p scan_mode:=Standard
+```
 
-you have to select respective serial port to check which port run this commands
+## you have to select respective serial port to check which port run this commands
 
+``` bash 
 ls -l /dev/serial/by-id/
+```
 
-this will list the peripherals connected to pi 
+## this will list the peripherals connected to pi 
 
-how to start and stop lidar motor
+### how to start and stop lidar motor
 
-check for ros2 service call
-
+#### check for ros2 service call
+```bash
 ros2 service call /stop_motor std_srvs/srv/Empty
+```
+```bash
 ros2 service call /start_motor std_srvs/srv/Empty
+```
