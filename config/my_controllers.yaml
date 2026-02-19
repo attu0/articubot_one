@@ -18,7 +18,7 @@ diff_cont:
 
     left_wheel_names: ['left_wheel_joint']
     right_wheel_names: ['right_wheel_joint']
-    wheel_separation: 0.20
+    wheel_separation: 0.19
     wheel_radius: 0.033
 
     use_stamped_vel: false
@@ -27,8 +27,8 @@ diff_cont:
 
     # wheels_per_side: x
     # wheel_separation_multiplier: x
-    # left_wheel_radius_multiplier: x
-    # right_wheel_radius_multiplier: x
+    left_wheel_radius_multiplier: 1.026
+    right_wheel_radius_multiplier: 0.976
 
     # odom_frame_id: x
     # pose_covariance_diagonal: x

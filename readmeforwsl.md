@@ -1,4 +1,4 @@
-#commands to remove wsl 
+# commands to remove wsl 
 
 ```
 wsl --shutdown
@@ -11,7 +11,7 @@ wsl --list --verbose
 wsl --unregister Ubuntu-22.04
 ```
 
-##making directory
+## making directory
 
 ```
 mkdir -p dev_ws/src
@@ -33,4 +33,4 @@ cd ..
 colcon build --symlink-install
 ```
 
-ros2 launch 
+rest follow the main readme.md file

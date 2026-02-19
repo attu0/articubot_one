@@ -8,7 +8,7 @@
         <param name="device">/dev/ttyACM0</param>
         <param name="baud_rate">57600</param>
         <param name="timeout_ms">100</param>
-        <param name="enc_counts_per_rev">1300</param>
+        <param name="enc_counts_per_rev">1286</param>
         <param name="loop_rate">30.0</param>
         <param name="wheel_radius">0.033</param>
         <param name="wheel_separation">0.20</param>
