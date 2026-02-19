@@ -55,7 +55,6 @@
     <link name="base_footprint">
     </link>
 
-
     <!-- CHASSIS LINK -->
 
     <joint name="chassis_joint" type="fixed">
@@ -84,7 +83,7 @@
     </link>
 
     <gazebo reference="chassis">
-        <material>Gazebo/Black</material>
+        <material>Gazebo/Orange</material>
     </gazebo>
 
     <!-- LEFT WHEEL LINK -->
