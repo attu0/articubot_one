@@ -13,6 +13,10 @@ sudo apt upgrade
 sudo apt install raspi-config
 ```
 
+```bash
+sudo apt raspi-config
+```
+
 ##### Navigate to **Interface Options** and enable:
 - Legacy Camera
 - SPI
