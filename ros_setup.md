@@ -10,7 +10,7 @@ sudo apt upgrade
 
 ##### Install and run raspi-config:
 ```bash
-sudo apt install raspi-config
+sudo apt install raspi-config -y
 ```
 
 ```bash
