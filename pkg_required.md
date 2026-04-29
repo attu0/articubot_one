@@ -3,7 +3,7 @@
 # diffdrive_arduino
 
 ```bash
-https://github.com/attu0/diffdrive_arduino.git
+https://github.com/joshnewans/diffdrive_arduino/tree/humble
 ```
 
 This package is being used in ros2 control to control the motors, at this path /dev_ws/src/articubot_one/description/ros2_control.xacro. To define the params to control actuators with ros2 coontrol
